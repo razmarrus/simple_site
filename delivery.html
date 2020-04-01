@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Healty Food</title>
         <meta charset="UTF-8">
@@ -11,8 +12,7 @@
 
     </head>
     
-
-    <header  scroll="no" class="header"> 
+    <header class="header"> 
         <div class="container">
             <div class="header_inner">
                 <div class="header_logo">Healty Food</div>
@@ -33,3 +33,155 @@
         <div class="constainer">
         </div> 
     </div>
+
+
+    
+    <script>
+        function deliveryChange() {
+            if (document.getElementById("ordinary_switch").checked) {
+            /*document.getElementById("country_table").style.visibility = "visible";
+            document.getElementById("delivery_table").style.visibility = "hidden";*/
+            document.getElementById("delivery_table").style.display = "none";
+            document.getElementById("country_table").style.display = "inline";
+            }
+            else {
+            document.getElementById("delivery_table").style.display = "inline";
+            document.getElementById("country_table").style.display = "none";
+            }
+        }
+    </script>
+
+    <div id="text">
+        <h1>Food delivery</h1>
+        <p>Delivery type</p>
+
+        <input checked="" onclick="deliveryChange()" type="radio" id="ordinary_switch" name="tabledata"><label for="ordinary_switch">Ordinary</label>
+        <input checked="true" onclick="deliveryChange()" type="radio" id="express_switch" name="tabledata"><label for="express_switch">Express</label>
+        <dir>
+        <select class="country_table" id="country_table">
+                <option>Sweden</option>
+                <option>Belarus</option>
+                <option>Ireland</option>
+                <option>Norway</option>
+                <option>United Arab Emirates</option>
+                <option>Switzerland</option>
+                <option>United States</option>
+                <option>Iceland</option>
+                <option>Germany</option>
+                <option>Denmark</option>
+                <option>Austria</option>
+                <option>Australia</option>
+                <option>Canada</option>
+        </select>
+        </dir>
+                    
+        <table id="areas">
+            <tbody id="delivery_table" name="exress_delivery">
+            <tr> 
+                    <td></td>
+                    <td>Country</td>
+                    <td>Price</td>
+            </tr> 
+            <tr > 
+                <td><input type="radio" name="exress_delivery"></td>
+                <td>Sweden</td>
+                <td>23,5</td>
+
+            </tr> 
+            <tr > 
+                <td><input type="radio" name="exress_delivery"></td>
+                <td>Ireland</td> 
+                <td>18,2</td>
+            </tr> 
+            <tr > 
+                <td><input type="radio" name="exress_delivery"></td>
+                <td>Germany</td> 
+                <td>15,9</td>
+            </tr> 
+            <tr > 
+                <td><input type="radio" name="exress_delivery"></td>
+                <td>Belgum</td> 
+                <td>11,7</td>
+            </tr> 
+            <tr > 
+                <td><input type="radio" name="exress_delivery"></td>
+                <td>Austria</td> 
+                <td>5,6</td>
+            </tr> 
+            </tbody>
+        </table>
+        <!--<p><input type="radio" id="resetswitch" name="tabledata" checked><label for="resetswitch">Не показывать никаких значений</label></p>
+        <p><input type="checkbox" id="titleswitch"><label for="titleswitch">Скрыть названия городов и зон.</label></p>-->
+    </div>
+
+    
+    <h2>Delivery details</h2>
+
+    <div  href="" class="container-input">
+        
+        <div  ><input type="text">
+            <p>Name</p>>
+        </div>
+    </div>
+
+    <div  href="" class="container-input">
+        
+            <div  ><input type="text">
+                <p>Mail</p>>
+            </div>
+        </div>
+
+    <div class="page-container">
+        <div class="twin-page-container-inner">
+            <div  href="" class="container-input">
+                    <div ><input type="text">  <p>City</p>></div>
+            </div>
+        </div>
+        <div class="twin-page-container-inner">
+            <div  href="" class="container-input">
+                    <div ><input type="text">  <p>Street</p>></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page-container">
+        <div class="triple-page-container-inner">
+            <div  href="" class="container-input">
+        
+                <div  ><input type="text">
+                    <p>House no.</p>>
+                </div>
+            </div>
+        </div>
+        <div class="triple-page-container-inner">
+            <div  href="" class="container-input">
+                    <div ><input type="text">  <p>Housing</p>></div>
+            </div>
+        </div>
+        <div class="triple-page-container-inner">
+            <div  href="" class="container-input">
+                    <div ><input type="text">  <p>Flat</p>></div>
+            </div>
+        </div>
+    </div>
+
+
+        <!--<div class="requiredtext last-child">*Поля, помеченные звездочкой (*) обязательны для заполнения! </div>-->
+        <!--<hr class="addr_line">-->
+
+    
+    <div class="delivery_comment">
+        <p>Comments to your order	</p>
+
+        <div ><textarea  name="order_add_info"></textarea></div>
+    </div>
+          
+    <div></div>
+    </div>
+        <button class=delivery_submit_btn>submit</button>
+    </div>
+
+</html>
+
+
