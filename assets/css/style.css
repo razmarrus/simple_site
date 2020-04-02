@@ -274,6 +274,61 @@ div.page-container {
 }
 
 
+/*table for consumed dishes profile*/
+
+.consumed_components_table {
+    position: relative;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 50px, 10px;
+    top: 90%;
+    width: 90%;
+    left: 5%;
+    text-align: left;
+    border-collapse: collapse;
+    border-radius: 20px;
+    box-shadow: 0 0 0 10px green;
+    color: #452F21;
+    transition: transform .4s ease-out;
+}
+
+.consumed_components_table th {
+padding: 10px 8px;
+background: white;
+}
+
+.consumed_components_table table th:first-child {
+border-top-left-radius: 20px;
+}
+
+.consumed_components_table table th:last-child {
+border-top-right-radius: 20px;
+}
+
+.consumed_components_table td {
+border-top: 10px solid green;
+padding: 8px;
+background: white;
+}
+
+.consumed_components_table td:first-child {
+border-bottom-left-radius: 20px;
+}
+
+.consumed_components_table td:last-child {
+border-bottom-right-radius: 20px;
+}
+
+
+.food_points_stat{
+
+    /*text-align: left;*/
+    font-family:  "Open Sans Condensed";
+    font-style: italic;
+    font-size: 20px;
+    color: green; 
+}
 
 
 
