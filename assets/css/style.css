@@ -330,6 +330,11 @@ border-bottom-right-radius: 20px;
     color: green; 
 }
 
+.invisible_info_table
+{
+    display: none;
+}
+
 
 
   

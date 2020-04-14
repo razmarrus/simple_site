@@ -31,6 +31,9 @@
         }
     </style>
 
+    <script src="model.js"></script>
+    <script src="order_management.js"></script>
+
 
     <header  scroll="no" class="header"> 
         <div class="container">
@@ -60,7 +63,7 @@
             <a href="" class="product">
                 <div class="product-photo">
                         <img  src="assets/images/food1.jpg" alt="">
-                        <button class="btn">Buy</button>
+                        <button onclick="addDishToCart(1)" class="btn">Buy</button>
                 </div>
             </a>
         </div>
@@ -68,7 +71,7 @@
             <a href="" class="product">
                 <div class="product-photo">
                         <img src="assets/images/food2.jpg" alt="">
-                        <button class="btn">Buy</button>
+                        <button onclick="addDishToCart(2)" class="btn">Buy</button>
                 </div>
             </a>
         </div>
@@ -76,7 +79,7 @@
             <a href="" class="product">
                 <div class="product-photo">
                         <img src="assets/images/food3.jpg" alt="">
-                        <button class="btn">Buy</button>
+                        <button onclick="addDishToCart(3)" class="btn">Buy</button>
                 </div>
             </a>
 
@@ -85,7 +88,7 @@
             <a href="" class="product">
                 <div class="product-photo">
                         <img src="assets/images/food4.jpg" alt="">
-                        <button class="btn">Buy</button>
+                        <button onclick="addDishToCart(4)" class="btn">Buy</button>
                 </div>
             </a>
         </div>
@@ -93,8 +96,8 @@
         <div class="product-wrapper">
                 <a href="" class="product">
                     <div class="product-photo">
-                            <img src="assets/images/food5.jpg" alt="">
-                            <button class="btn">Buy</button>
+                        <img src="assets/images/food5.jpg" alt="">
+                        <button onclick="addDishToCart(5)" class="btn">Buy</button>
                     </div>
                 </a>
             </div>
@@ -103,7 +106,7 @@
                 <a href="" class="product">
                     <div class="product-photo">
                             <img src="assets/images/food6.jpg" alt="">
-                            <button class="btn">Buy</button>
+                            <button onclick="addDishToCart(6)" class="btn">Buy</button>
                     </div>
                 </a>
             </div>
@@ -111,7 +114,7 @@
                     <a href="" class="product">
                         <div class="product-photo">
                                 <img src="assets/images/food7.jpg" alt="">
-                                <button class="btn">Buy</button>
+                                <button onclick="addDishToCart(7)" class="btn">Buy</button>
                         </div>
                     </a>         
             </div>
@@ -119,7 +122,7 @@
                 <a href="" class="product">
                     <div class="product-photo">
                             <img src="assets/images/food8.jpg" alt="">
-                            <button class="btn">Buy</button>
+                            <button onclick="addDishToCart(8)" class="btn">Buy</button>
                     </div>
                 </a>
             </div>
@@ -127,11 +130,85 @@
                 <a href="" class="product">
                     <div class="product-photo">
                             <img src="assets/images/food9.jpg" alt="">
-                            <button class="btn">Buy</button>
+                            <button onclick="addDishToCart(9)" class="btn">Buy</button>
                     </div>
                 </a>
             </div>
     </div>
+
+
+    <table class="invisible_info_table">
+        <tbody>
+            <tr> 
+                <td>Dish</td>
+                <td>Quantity</td>
+                <td>Caloric content</td>
+                <td>Proteins</td>
+                <td>Fats</td>
+                <td>Carbohydrates</td>
+            </tr> 
+            <tr > 
+                <td id="food_name1">Falafel</td>
+                <td id="food_points1">25</td>
+                <td id="number1">1</td>
+                <td id="сaloric_content1">330</td>
+                <td id="proteins1">13.31</td>
+                <td id="fats1">17.8</td>
+                <td id="carbohydrates1">31.84</td>
+                <td id="in_stock1">true</td>
+                <td id="postage_costs1">1</td>
+                <td id="taxis_cost1">1</td>
+            </tr> 
+            <tr > 
+                <td id="food_name8">Korean carrots</td>
+                <td id="food_points8">5</td>
+                <td id="number8">8</td>
+                <td id="сaloric_content8">122.6</td>
+                <td id="proteins8">1.2</td>
+                <td id="fats8">8.2</td> 
+                <td id="carbohydrates8">9</td>
+                <td id="in_stock8">true</td>
+                <td id="postage_costs8">8</td>
+                <td id="taxis_cost8">8</td>
+            </tr> 
+            <tr > 
+                <td id="food_name2">Miso soup</td>
+                <td id="food_points2">20</td>
+                <td id="number2">2</td>
+                <td id="сaloric_content2">70.53</td>
+                <td id="proteins2">2.72</td>
+                <td id="fats2">1.68</td> 
+                <td id="carbohydrates2">10.93</td>
+                <td id="in_stock2">true</td>
+                <td id="postage_costs2">6</td>
+                <td id="taxis_cost2">6</td>
+            </tr> 
+            <tr > 
+                <td id="food_name6">Tofu and cabbage pie</td>
+                <td id="food_points6">10</td>
+                <td id="number6">6</td>
+                <td id="сaloric_content6">129</td>
+                <td id="proteins6">5.4</td>
+                <td id="fats6">1.9</td> 
+                <td id="carbohydrates6">26.1</td>
+                <td id="in_stock6">true</td>
+                <td id="postage_costs6">6</td>
+                <td id="taxis_cost6">6</td>
+            </tr> 
+            <!--<tr > 
+                <td id="food_name"></td>
+                <td id="food_points"></td>
+                <td id="number"></td>
+                <td id="сaloric_content"></td>
+                <td id="proteins"></td>
+                <td id="fats"></td> 
+                <td id="carbohydrates"></td>
+                <td id="in_stock"></td>
+                <td id="postage_costs"></td>
+                <td id="taxis_cost"></td>
+            </tr> -->
+            </tbody>
+        </table>
     
 
 </html>
