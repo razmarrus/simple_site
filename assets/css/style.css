@@ -336,5 +336,20 @@ border-bottom-right-radius: 20px;
 }
 
 
+.show_button {
+    
+    position: relative;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
 
   

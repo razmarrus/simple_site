@@ -18,7 +18,7 @@ class Person {
     почтовых доставок, проверить актуальные налоговые ставки в 
     разных частях света*/
 class Dish {
-    constructor(name, number,food_points, сaloric_content, proteins, fats, carbohydrates, in_stock, postage_costs, taxis_cost)
+    constructor(name, number,food_points, сaloric_content, proteins, fats, carbohydrates, in_stock, postage_costs, taxis_cost, discount)
     {
         this.name = name;
         this.food_points = food_points;
@@ -30,6 +30,7 @@ class Dish {
         this.postage_costs = postage_costs;
         this.taxis_cost = taxis_cost;
         this.number = number;
+        this.discount = discount;
         //this. = ; 
     }
 }
