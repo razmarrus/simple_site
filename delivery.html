@@ -8,8 +8,6 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="assets/css/style.css">
 
-        <!--<link rel="stylesheet" href="css/style.css">-->
-
     </head>
     
     <header class="header"> 
@@ -20,7 +18,6 @@
                 <nav>
                     <a class="nav_link" href="index.html">Menu</a>
                     <a class="nav_link" href="delivery.html">Delivery</a>
-                    <!--<a class="nav_link" href="cart.html">Cart</a>-->
                     <a class="nav_link" href="profile.html">Profile</a>
                 </nav>
             </div>
@@ -35,7 +32,8 @@
     </div>
 
 
-    
+    <script src="model.js"></script>
+    <script src="order_management.js"></script>
     <script>
         function deliveryChange() {
             if (document.getElementById("ordinary_switch").checked) {
@@ -57,60 +55,158 @@
         <input checked="true" onclick="deliveryChange()" type="radio" id="express_switch" name="tabledata"><label for="express_switch">Express</label>
         <dir>
         <select class="country_table" id="country_table">
-                <option>Sweden</option>
-                <option>Belarus</option>
-                <option>Ireland</option>
-                <option>Norway</option>
-                <option>United Arab Emirates</option>
-                <option>Switzerland</option>
-                <option>United States</option>
-                <option>Iceland</option>
-                <option>Germany</option>
-                <option>Denmark</option>
-                <option>Austria</option>
-                <option>Australia</option>
-                <option>Canada</option>
+                <option id="ordinary_delivery_option1">Sweden</option>
+                <option id="ordinary_delivery_option2">Ireland</option>
+                <option id="ordinary_delivery_option3">Germany</option>
+                <option id="ordinary_delivery_option4">Belgum</option>
+                <option id="ordinary_delivery_option5">Austria</option>
+                <option id="ordinary_delivery_option6">Belarus</option>
+                <option id="ordinary_delivery_option7">Norway</option>
+                <option id="ordinary_delivery_option8">United Arab Emirates</option>
+                <option id="ordinary_delivery_option9">Switzerland</option>
+                <option id="ordinary_delivery_option8">Iceland</option>
+                <option id="ordinary_delivery_option10">Denmark</option>
+                <option id="ordinary_delivery_option11">United States</option>
+                <option id="ordinary_delivery_option12">Australia</option>
+                <option id="ordinary_delivery_option13">Canada</option>
         </select>
         </dir>
+
                     
         <table id="areas">
             <tbody id="delivery_table" name="exress_delivery">
             <tr> 
-                    <td></td>
-                    <td>Country</td>
-                    <td>Price</td>
+                <td></td>
+                <td>Country</td>
+                <td>Delivery</td>
+                <td>Taxis</td>
             </tr> 
             <tr > 
-                <td><input type="radio" name="exress_delivery"></td>
+                <td><input id="express_delivery_option1" checked="true" type="radio" name="exress_delivery"></td>
                 <td>Sweden</td>
                 <td>23,5</td>
-
+                <td>35</td>
             </tr> 
             <tr > 
-                <td><input type="radio" name="exress_delivery"></td>
+                <td><input id="express_delivery_option2" type="radio" name="exress_delivery"></td>
                 <td>Ireland</td> 
                 <td>18,2</td>
+                <td>10</td>
             </tr> 
             <tr > 
-                <td><input type="radio" name="exress_delivery"></td>
+                <td><input id="express_delivery_option3" type="radio" name="exress_delivery"></td>
                 <td>Germany</td> 
                 <td>15,9</td>
+                <td>30</td>
             </tr> 
             <tr > 
-                <td><input type="radio" name="exress_delivery"></td>
+                <td><input id="express_delivery_option4" type="radio" name="exress_delivery"></td>
                 <td>Belgum</td> 
                 <td>11,7</td>
+                <td>17</td>
             </tr> 
             <tr > 
-                <td><input type="radio" name="exress_delivery"></td>
+                <td><input id="express_delivery_option5" type="radio" name="exress_delivery"></td>
                 <td>Austria</td> 
                 <td>5,6</td>
+                <td>12</td>
             </tr> 
             </tbody>
         </table>
-        <!--<p><input type="radio" id="resetswitch" name="tabledata" checked><label for="resetswitch">Не показывать никаких значений</label></p>
-        <p><input type="checkbox" id="titleswitch"><label for="titleswitch">Скрыть названия городов и зон.</label></p>-->
+
     </div>
+
+
+    <div>
+        <!--"consumed_components_table">-->
+        <table class="delivery-table" >
+            <caption>Current order</caption>
+            <tbody>
+                <tr id="table_stat_line"> 
+                    <td>Dish</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Discount</td>
+                    <td>Final price</td>
+                </tr> 
+                <tr id="table_stat_line1"> 
+                    <td>Falafel</td>
+                    <td id="quantity1"></td>
+                    <td id="price_of_dish1"></td>
+                    <td id="discount1"></td>
+                    <td id="price_of_with_discount1"></td>
+                </tr> 
+                <tr id="table_stat_line2"> 
+                    <td>Miso soup</td>
+                    <td id="quantity2"></td>
+                    <td id="price_of_dish2"></td>
+                    <td id="discount2"></td>
+                    <td id="price_of_with_discount2"></td>
+                </tr> 
+                <tr id="table_stat_line3"> 
+                    <td>Banana smoothie</td>
+                    <td id="quantity3"></td>
+                    <td id="price_of_dish3"></td>
+                    <td id="discount3"></td>
+                    <td id="price_of_with_discount3"></td>
+                </tr> 
+                <tr id="table_stat_line4"> 
+                    <td>vegetable protein</td>
+                    <td id="quantity4"></td>
+                    <td id="price_of_dish4"></td>
+                    <td id="discount4"></td>
+                    <td id="price_of_with_discount4"></td> 
+                </tr> 
+                <tr id="table_stat_line5"> 
+                    <td>Pumpkin soup</td>
+                    <td id="quantity5"></td>
+                    <td id="price_of_dish5"></td>
+                    <td id="discount5"></td>
+                    <td id="price_of_with_discount5"></td>
+                </tr> 
+                <tr id="table_stat_line6"> 
+                    <td>Tofu and cabbage pie</td>
+                    <td id="quantity6"></td>
+                    <td id="price_of_dish6"></td>
+                    <td id="discount6"></td>
+                    <td id="price_of_with_discount6"></td>
+                </tr> 
+                <tr id="table_stat_line7"> 
+                    <td>Vegetable stew</td>
+                    <td id="quantity7"></td>
+                    <td id="price_of_dish7"></td>
+                    <td id="discount7"></td>
+                    <td id="price_of_with_discount7"></td>
+                </tr> 
+    
+                <tr id="table_stat_line8"> 
+                    <td>Korean carrots</td>
+                    <td id="quantity8"></td>
+                    <td id="price_of_dish8"></td>
+                    <td id="discount8"></td>
+                    <td id="price_of_with_discount8"></td>
+                </tr> 
+                <tr id="table_stat_line9"> 
+                    <td>Broccoli salad</td>
+                    <td id="quantity9"></td>
+                    <td id="price_of_dish9"></td>
+                    <td id="discount9"></td>
+                    <td id="price_of_with_discount9"></td>
+                </tr> 
+                <tr class="delivery-table_totlat" id="total_order"> 
+                    <td>Total ordered</td>
+                    <td id="quantity_of_order"></td>
+                    <td id="price_of_order"></td>
+                    <td></td>
+                    <td id="price_of_order_with_discount"></td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+
+    <div><h2 id="final_price">Price with delivery: waiting for update (press the button below)</h2></div>
+    <div></div>
+    <div><button onclick="updateDeliveryPrice()" class=delivery_submit_btn>update price (with delivery)</button></div>
 
     
     <h2>Delivery details</h2>
@@ -165,20 +261,106 @@
     </div>
 
 
-        <!--<div class="requiredtext last-child">*Поля, помеченные звездочкой (*) обязательны для заполнения! </div>-->
-        <!--<hr class="addr_line">-->
-
     
     <div class="delivery_comment">
         <p>Comments to your order	</p>
 
         <div ><textarea  name="order_add_info"></textarea></div>
     </div>
+
+    <div >
+        <h2>choose payment method</h2>
+        <input name="paimentType" checked=""  type="radio" ><label for="ordinary_switch">Online (credit card)</label>
+        <input name="paimentType" checked="true"  type="radio"><label for="express_switch">Upon receipt</label>
+    </div>
           
     <div></div>
     </div>
-        <button class=delivery_submit_btn>submit</button>
+        <button onclick="buyDishes()" class=delivery_submit_btn>submit</button>
     </div>
+
+
+<table class="invisible_info_table">
+    <tbody>
+    <tr > 
+        <td id="delivery_country1">Sweden</td>
+        <td id="delivery_price1">23.5</td>
+        <td id="delivert_tax1">35</td>
+        <td id="delivert_country_number"></td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country2">Ireland</td> 
+        <td id="delivery_price2">18.2</td>
+        <td id="delivert_tax2">10</td>
+        <td id="delivert_country_number"></td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country3">Germany</td> 
+        <td id="delivery_price3">15.9</td>
+        <td id="delivert_tax3">30</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country4">Belgum</td> 
+        <td id="delivery_price4">11.7</td>
+        <td id="delivert_tax4">17</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country5">Austria</td> 
+        <td id="delivery_price5">5.6</td>
+        <td id="delivert_tax5">12</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country6">Belarus</td> 
+        <td id="delivery_price6">20</td>
+        <td id="delivert_tax6">66</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country7">Norway</td> 
+        <td id="delivery_price7">7</td>
+        <td id="delivert_tax7">11</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country8">United_Arab_Emirates</td> 
+        <td id="delivery_price8">70</td>
+        <td id="delivert_tax8">15</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country9">Switzerland</td> 
+        <td id="delivery_price9">20</td>
+        <td id="delivert_tax9">35</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country10">Denmark</td> 
+        <td id="delivery_price10">10</td>
+        <td id="delivert_tax10">28</td>
+    <tr > 
+        <td id="delivery_country11">United_States</td> 
+        <td id="delivery_price11">72</td>
+        <td id="delivert_tax11">15</td>
+    </tr>  
+    <tr > 
+        <td id="delivery_country12">Australia</td> 
+        <td id="delivery_price12">8</td>
+        <td id="delivert_tax12">35</td>
+    </tr> 
+    <tr > 
+        <td id="delivery_country13">Canada</td> 
+        <td id="delivery_price13">64</td>
+        <td id="delivert_tax13">27</td>
+    </tr> 
+    </tbody>
+</table>
+
+<script>
+    window.onload = function() 
+    {
+        deliveryInfo();
+        initializeCountry()
+        //initializeCountry();
+    };
+                
+</script>
+
 
 </html>
 

@@ -1,24 +1,18 @@
-class Cart {
-    constructor(person, dish_list){
-        this.person = person;
-        this.dish_list = dish_list ? dish_list : [];
+class Country {
+    constructor(name, number,delivery_price, tax){
+        this.delivery_price = delivery_price;
+        this.tax = tax ? tax : 0;
+        this.number = number;
+        this.name = name;
     }
 }
 
-class Person {
-    constructor(name, mail, food_points, purchased_dishes){
-        this.name = name ? name : "guest";
-        this.mail = mail ? mail : "-";
-        this.food_points = food_points ? food_points : 0; 
-        this.purchased_dishes = purchased_dishes ? purchased_dishes : {}; 
-    }
-}
 
 /* (проверить наличие товара на складах, проверить стоимости 
     почтовых доставок, проверить актуальные налоговые ставки в 
     разных частях света*/
-class Dish {
-    constructor(name, number,food_points, сaloric_content, proteins, fats, carbohydrates, in_stock, postage_costs, taxis_cost, discount)
+class Dish { //name, number,food_points, сaloric_content, proteins, fats, carbohydrates, in_stock, postage_costs, taxis_cost, discount, price
+    constructor(name, number,food_points, сaloric_content, proteins, fats, carbohydrates, in_stock, discount, price)
     {
         this.name = name;
         this.food_points = food_points;
@@ -27,10 +21,8 @@ class Dish {
         this.fats = fats; 
         this.carbohydrates = carbohydrates; 
         this.in_stock = in_stock;
-        this.postage_costs = postage_costs;
-        this.taxis_cost = taxis_cost;
         this.number = number;
         this.discount = discount;
-        //this. = ; 
+        this.price = price ? price : 100;
     }
 }

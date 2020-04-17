@@ -7,8 +7,6 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="assets/css/style.css">
 
-        <!--<link rel="stylesheet" href="css/style.css">-->
-
     </head>
 
     <style>
@@ -34,6 +32,13 @@
     <script src="model.js"></script>
     <script src="order_management.js"></script>
 
+    <script>
+        window.onload = function() 
+        {
+            initializeInfo();
+        };                    
+    </script>
+
 
     <header  scroll="no" class="header"> 
         <div class="container">
@@ -43,7 +48,6 @@
                 <nav>
                     <a class="nav_link" href="index.html">Menu</a>
                     <a class="nav_link" href="delivery.html">Delivery</a>
-                    <!--<a class="nav_link" href="cart.html">Cart</a>-->
                     <a class="nav_link" href="profile.html">Profile</a>
                 </nav>
             </div>
@@ -60,9 +64,9 @@
 
     <div>
         <div>
-            <button class="show_button" onclick="showAll()">Show_all</button> 
-            <button class="show_button" onclick="showOnlyInStock()">in_stock </button>
-            <button class="show_button" onclick="showDiscount()">discount </button>
+            <button id="showAllButton" class="show_button" onclick="showAll()">Show_all</button> 
+            <button id="showInStockButton" class="show_button" onclick="showOnlyInStock()">in_stock </button>
+            <button id="showDiscountButton" class="show_button" onclick="showDiscount()">discount </button>
         </div>
     </div>
     
@@ -156,8 +160,7 @@
                 <td id="fats1">17.8</td>
                 <td id="carbohydrates1">31.84</td>
                 <td id="in_stock1">true</td>
-                <td id="postage_costs1">1</td>
-                <td id="taxis_cost1">1</td>
+                <td id="price1">11</td>
                 <td id="discount1">0</td>
             </tr> 
             <tr > 
@@ -169,8 +172,7 @@
                 <td id="fats2">1.68</td> 
                 <td id="carbohydrates2">10.93</td>
                 <td id="in_stock2">true</td>
-                <td id="postage_costs2">6</td>
-                <td id="taxis_cost2">6</td>
+                <td id="price2">26</td>
                 <td id="discount2">0.1</td>
             </tr> 
             <tr > 
@@ -182,8 +184,7 @@
                 <td id="fats3">1.9</td> 
                 <td id="carbohydrates3">26.1</td>
                 <td id="in_stock3">true</td>
-                <td id="postage_costs3">0</td>
-                <td id="taxis_cost3">0</td>
+                <td id="price3">33</td>
                 <td id="discount3">0</td>
             </tr> 
             <tr > 
@@ -195,8 +196,7 @@
                 <td id="fats4">2</td> 
                 <td id="carbohydrates4">3</td>
                 <td id="in_stock4">false</td>
-                <td id="postage_costs4">0</td>
-                <td id="taxis_cost4">0</td>
+                <td id="price4">20</td>
                 <td id="discount4">0.4</td>
             </tr> 
             <tr > 
@@ -208,8 +208,7 @@
                 <td id="fats5">2.1</td> 
                 <td id="carbohydrates5">5.63</td>
                 <td id="in_stock5">true</td>
-                <td id="postage_costs5"></td>
-                <td id="taxis_cost5"></td>
+                <td id="price5">55</td>
                 <td id="discount5">0</td>
             </tr> 
             <tr > 
@@ -221,8 +220,7 @@
                 <td id="fats6">1.9</td> 
                 <td id="carbohydrates6">26.1</td>
                 <td id="in_stock6">true</td>
-                <td id="postage_costs6">6</td>
-                <td id="taxis_cost6">6</td>
+                <td id="price6">6</td>
                 <td id="discount6">0.2</td>
             </tr> 
             <tr > 
@@ -234,8 +232,7 @@
                 <td id="fats7">5.2</td> 
                 <td id="carbohydrates7">16.1</td>
                 <td id="in_stock7">false</td>
-                <td id="postage_costs7">0</td>
-                <td id="taxis_cost7">0</td>
+                <td id="price7">10</td>
                 <td id="discount7">0.6</td>
             </tr> 
             <tr > 
@@ -247,8 +244,7 @@
                 <td id="fats8">8.2</td> 
                 <td id="carbohydrates8">9</td>
                 <td id="in_stock8">true</td>
-                <td id="postage_costs8">8</td>
-                <td id="taxis_cost8">8</td>
+                <td id="price8">8</td>
                 <td id="discount8">0</td>
             </tr> 
             <tr > 
@@ -260,22 +256,9 @@
                 <td id="fats9">4.5</td> 
                 <td id="carbohydrates9">6.4</td>
                 <td id="in_stock9">fasle</td>
-                <td id="postage_costs9">0</td>
-                <td id="taxis_cost9">0</td>
+                <td id="price9">100</td>
                 <td id="discount9">0</td>
             </tr> 
-            <!--<tr > 
-                <td id="food_name"></td>
-                <td id="food_points"></td>
-                <td id="number"></td>
-                <td id="сaloric_content"></td>
-                <td id="proteins"></td>
-                <td id="fats"></td> 
-                <td id="carbohydrates"></td>
-                <td id="in_stock"></td>
-                <td id="postage_costs"></td>
-                <td id="taxis_cost"></td>
-            </tr> -->
             </tbody>
         </table>
     
